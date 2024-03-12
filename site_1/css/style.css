@@ -1,0 +1,697 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerRegular.woff2') format('woff2'),
+        url('../fonts/MullerRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerMedium.woff2') format('woff2'),
+        url('../fonts/MullerMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerBold.woff2') format('woff2'),
+        url('../fonts/MullerBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerLight.woff2') format('woff2'),
+        url('../fonts/MullerLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-color: #cc9933;
+}
+
+.body {
+    font-family: 'Muller';
+    font-weight: normal;
+    background-color: #f1f1f1;
+    color: var(--font-color);
+}
+
+.visually-hidden {
+    position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    --font-color: #cc9933;
+    color: var(--font-color);
+}
+
+.link {
+    transition-property: color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.link:hover {
+    text-shadow: 0 0 0 transparent, 0 0 0 transparent;
+    --font-color: #ffcc66;
+    color: var(--font-color);
+}
+
+.input {
+    border-style: none;
+    padding-left: 21px;
+    border-radius: 15px;
+    
+}
+
+.btn {
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #333333;
+}
+
+.h2 {
+    font-size: 40px;
+    font-weight: normal;
+    --font-color: #333333;
+    color: var(--font-color);
+    padding-left: 45px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 30px;
+}
+
+.first-header {
+    display: flex;
+    align-items: center;
+}
+
+.header-tel {
+    --font-color: #666666;
+    color: var(--font-color);
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.log-in {
+    margin-left: auto;
+    padding-left: 25px;
+    background-image: url("../img/log-in.png");
+    background-repeat: no-repeat;
+}
+
+.site-bar {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    margin-top: 30px;
+    padding: 11px 21px;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.site-bar-list {
+    --font-color: #333333;
+    color: var(--font-color);
+    padding-right: 30px;
+}
+
+.search {
+	height: 48px;
+    width: 355px;
+    background-color: #f1f1f1;
+    margin-left: auto;
+    --font-color: #c5c5c5;
+    color: var(--font-color);
+}
+
+.searchButton {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    border-style: none;
+	border-radius: 25px;
+	background-color: #f1f1f1;
+}
+
+.searchButton:before {
+	content: "\f002";
+	font-family: FontAwesome;
+    font-size: 22px;
+    --font-color: #3b3b3b;
+    color: var(--font-color);
+}
+
+.main {
+    margin-top: 70px;
+}
+
+.first-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation {
+    display: block;
+    margin-top: 24px;
+    width: 518px;
+    height: 70px;
+    --font-color: #a7a7a7;
+    color: var(--font-color);
+}
+
+.find-number {
+    margin-top: 24px;
+    height: 70px;
+    width: 160px;
+    border-style: none;
+    border-radius: 15px;
+    --font-color: #fff;
+    color: var(--font-color);
+    background-color: #cc9933;
+}
+
+.number-of-offers {
+    margin-left: 30px;
+}
+
+.offers-available {
+    --font-color: #999;
+    color: var(--font-color);
+}
+
+.about-us-section {
+    margin-top: 55px;
+}
+
+.about-us {
+    padding-left: 45px;
+    font-size: 16px;
+    --font-color: #666;
+    color: var(--font-color);
+    line-height: 32px;
+    max-width: 881px;     
+}
+
+.services {
+    margin-top: 55px;
+}
+
+.card-container {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 572px;
+    margin-bottom: 25px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.card:nth-child(2n) {
+    margin-right: 0;
+}
+
+.first-card-img {
+    background-image: url('../img/first-card.png');
+    background-repeat: no-repeat;
+}
+
+.second-card-img {
+    background-image: url('../img/second-card.png');
+    background-repeat: no-repeat;
+}
+
+.third-card-img {
+    background-image: url('../img/third-card.png');
+    background-repeat: no-repeat;
+}
+
+.fourth-card-img {
+    background-image: url('../img/fourth-card.png');
+    background-repeat: no-repeat;
+}
+
+.card-text {
+    padding: 40px 0 30px 45px;
+    margin-top: 160px;
+}
+
+.exclusive-service {
+   font-weight: 500;
+   font-size: 22px;
+   padding-right: 20px;
+   background-image: url("../img/arrow.png");
+   background-repeat: no-repeat;
+   background-position: right;
+}
+
+.about-service {
+    line-height: 32px;
+    --font-color: #333333;
+    color: var(--font-color);
+    max-width: 395px;
+    padding-top: 5px;
+}
+
+.advantages {
+    margin-top: 40px;
+}
+
+.advantages-card-container {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.advantages-card {
+    background-color: #fff;
+    border-radius: 12px;
+    margin-right: 19px;
+    margin-bottom: 24px;
+    height: 275px;
+    width: 275px;
+    display: inline-block;
+}
+
+.advantages-card:nth-child(4n){
+    margin-right: 0;
+}
+
+.first-advantages-card-img {
+    background-image: url("../img/bathhub.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.second-advantages-card-img {
+    background-image: url("../img/hanger.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.third-advantages-card-img {
+    background-image: url("../img/heating.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.fourth-advantages-card-img {
+    background-image: url("../img/hotel-key.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.fifth-advantages-card-img {
+    background-image: url("../img/parking.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.sixth-advantages-card-img {
+    background-image: url("../img/reception.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.seventh-advantages-card-img {
+    background-image: url("../img/security-box.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.eight-advantages-card-img {
+    background-image: url("../img/swimming-pool.png");
+    background-repeat: no-repeat;
+    background-position: left 20% top 20%;
+}
+
+.advantages-card-text {
+    --font-color: #333333;
+    color: var(--font-color);
+    line-height: 32px;
+    max-width: 185px;
+    padding: 115px 45px 30px 45px;
+}
+
+.accommodation {
+    margin-top: 40px;
+}
+
+.accommodation-card-container {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.accommodation-card {
+    width: 373px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.accommodation-card-text {
+    padding: 30px 44px 40px 44px;
+}
+
+.the-cost-of-the-hotel {
+    display: inline-block;
+}
+
+.from {
+    display: inline-block;
+    --font-color: #a4a4a4;
+    color: var(--font-color);
+}
+
+.cost-accommodation {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 22px;
+    --font-color: #333333;
+    color: var(--font-color);  
+}
+
+.night {
+    display: inline-block;
+    --font-color: #333333;
+    color: var(--font-color);
+}
+
+.stars {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 28px;
+}
+
+.hotel-description {
+    margin-top: 12px;
+    font-weight: bold;
+    --font-color: #333333;
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+.location-of-the-hotel {
+    margin-top: 13px;
+    --font-color: #999;
+    color: var(--font-color);
+}
+
+.hotel-numbers-btn {
+    border: 1px solid #cc9933;
+    background-color: #fff;
+    --font-color: #cc9933;
+    color: var(--font-color);
+    border-radius: 13px;
+    width: 100px;
+    height: 42px;
+    margin-top: 20px  
+}
+
+.all-option {
+    position: relative;
+}
+
+.variant {  
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    font-size: 22px;
+    --font-color: #fff;
+    color: var(--font-color);
+    font-weight: 500; 
+}
+
+.variant::before {
+    content: "";
+    position: absolute;
+    width: 127%;
+    height: 445px;
+    bottom: -60px;
+    left: -40px;
+}
+
+.variant::after {
+    font-family: "FontAwesome";
+    content: "\f105";
+    font-size: 28px;
+    padding-left: 10px;
+}
+
+.special-offer {
+    margin-bottom: 25px;
+}
+
+.special-offer-container {
+    background-image: url(../img/offer.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 540px;
+}
+
+.luxury-rooms {
+    font-size: 66px;
+    font-weight: bold;
+    line-height: 0.879;
+    width: 330px;
+    --font-color: #fff;
+    color: var(--font-color);
+    padding-top: 265px;
+    padding-bottom: 35px;
+    padding-left: 45px;
+}
+
+.cost {
+    font-size: 35px;
+    --font-color: #bda696;
+    color: var(--font-color);
+    padding-left: 45px;
+}
+
+.more-detailed {
+    font-size: 16px;
+    --font-color: #ffcc66;
+    color: var(--font-color);
+    padding-left: 45px;
+}
+
+.more-detailed::after {
+    font-family: "FontAwesome";
+    content: "\f105";
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.contacts {
+    margin-top: 70px;
+}
+
+.second-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 472px;
+    padding: 0 45px 28px 44px;
+}
+
+.contact-section-text {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0 20px 0;
+    line-height: 1.5;
+    width: 384px;
+}
+
+.contact-section-text:last-of-type{
+    margin-bottom: 50px;
+}
+
+.contact-section-headlines {
+    --font-color: #666;
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 22px;
+    float: left;
+}
+
+.contact-text {
+    max-width: 230px;
+    --font-color: #999;
+    color: var(--font-color);
+}
+
+.tel-and-mail {
+    display: inline-block;
+}
+
+.button-to-plot-a-route {
+    border: 1px solid #cc9933;
+    border-radius: 15px;
+    background-color: #fff;
+    width: 212px;
+    height: 68px;
+    --font-color: #cc9933;
+    color: var(--font-color);
+}
+
+.any-other-questions {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    --font-color: #333333;
+    color: var(--font-color);
+}
+
+.input-question {
+    --font-color: #999;
+    color: var(--font-color);
+    background-color: #f1f1f1;
+    width: 282px;
+    height: 70px;
+    border: none;
+    border-radius: 12px;
+    padding-left: 21px;
+    margin-right: 23px;
+}
+
+.message {
+    resize: none;
+    width: 615px;
+    height: 205px;
+    --font-color: #999;
+    color: var(--font-color);
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 0 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ 
+.consent {
+    --font-color: #999;
+    color: var(--font-color);
+}
+
+.the-send-button {
+    width: 340px;
+    height: 70px;
+    background-color: #cc9933;
+    --font-color: #fff;
+    color: var(--font-color);
+    border: none;
+    border-radius: 12px;
+    margin-top: 44px;
+    margin-bottom: 40px;
+}
+
+.footer {
+    margin-top: 22px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    height: 350px; 
+    background-image: url("../img/FooterLogo.png");
+    background-repeat: no-repeat;
+    background-position: 80% 100%;    
+}
+
+.footer-text {
+    --font-color: #fff;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.footer-first-column {
+    max-width: 300px;
+    max-height: 250px;
+    line-height: 2;
+    padding-left: 50px;
+}
+
+.footer-second-column {
+    max-height: 170px;
+    line-height: 1.5;
+}
+
+.footer-tel-and-mail {
+    display: flex;
+}
+
+.footer-social-networks {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 0 0;
+}
+
+.social-networks {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 258px;
+    height: 228px;
+    position: absolute;
+    left: 1110px;
+    top: 5150px;    
+}
