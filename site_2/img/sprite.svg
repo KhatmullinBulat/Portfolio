@@ -1,0 +1,19 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="notchecked">
+        <rect x="0.5" y="0.5" width="13" height="13" stroke="#CACACA" />
+    </symbol>
+
+    <symbol id="close-menu">
+        <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333" />
+        <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333" />
+    </symbol>
+
+    <symbol id="burger">
+        <rect width="30" height="3" fill="#333333" />
+        <rect y="10" width="30" height="3" fill="#333333" />
+        <rect y="20" width="30" height="3" fill="#333333" />
+    </symbol>
+
+
+</svg>
