@@ -100,6 +100,10 @@
   function inputListener(input, button) {
     input.addEventListener("input", function () {
       button.disabled = false;
+
+      if (input.value === "") {
+        button.disabled = true;
+      }
     });
   }
 
