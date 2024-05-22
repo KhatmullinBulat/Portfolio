@@ -9,17 +9,17 @@ let didWin = false;
 (() => {
   // создаём заголовок
   function createGameTitle(title) {
-    let gameTitle = document.createElement("h2");
+    const gameTitle = document.createElement("h2");
     gameTitle.textContent = title;
     return gameTitle;
   }
 
   // создаем и возвращаем форму для создания дела
   function createGameForm() {
-    let form = document.createElement("form");
-    let input = document.createElement("input");
-    let buttonWrapper = document.createElement("div");
-    let button = document.createElement("button");
+    const form = document.createElement("form");
+    const input = document.createElement("input");
+    const buttonWrapper = document.createElement("div");
+    const button = document.createElement("button");
 
     // устанавливаем стили для формы и его элементов
     form.classList.add("input-group", "mb-3");
@@ -30,8 +30,7 @@ let didWin = false;
     button.textContent = "Начать игру";
 
     buttonWrapper.append(button);
-    form.append(input);
-    form.append(buttonWrapper);
+    form.append(input, buttonWrapper);
 
     return {
       form,
@@ -42,7 +41,7 @@ let didWin = false;
 
   // создаём контейнер для карточек
   function createBoard() {
-    let board = document.createElement("div");
+    const board = document.createElement("div");
 
     board.classList.add("board");
 
@@ -70,23 +69,22 @@ let didWin = false;
 
   // функция для создания карточек
   function createCard() {
-    let card = document.createElement("div");
-    let front = document.createElement("div");
-    let back = document.createElement("div");
+    const card = document.createElement("div");
+    const front = document.createElement("div");
+    const back = document.createElement("div");
 
     card.classList.add("card");
     front.classList.add("card__front");
     back.classList.add("card__back");
 
-    card.append(front);
-    card.append(back);
+    card.append(front, back);
 
     return { card, front };
   }
 
   // кнопка сыграть еще раз
   function createAgainButton() {
-    let btn = document.createElement("button");
+    const btn = document.createElement("button");
     btn.classList.add("btn");
     btn.textContent = "Сыграть еще раз";
     // если игрок выиграл кнопка окрашивается в зеленый, иначе в красный
@@ -113,7 +111,7 @@ let didWin = false;
       // отключаем кнопку
       itemForm.button.disabled = true;
 
-      let board = createBoard();
+      const board = createBoard();
 
       // переводим строку в число
       value = Number(value);
@@ -127,7 +125,7 @@ let didWin = false;
       shuffle(numbers);
 
       for (number of numbers) {
-        let cardItem = createCard();
+        const cardItem = createCard();
         cardItem.front.textContent = number;
         board.append(cardItem.card);
 
@@ -152,8 +150,8 @@ let didWin = false;
           }
 
           if (firstCard != null && secondCard != null) {
-            let firstNumber = firstCard.front.textContent;
-            let secondNumber = secondCard.front.textContent;
+            const firstNumber = firstCard.front.textContent;
+            const secondNumber = secondCard.front.textContent;
 
             if (firstNumber === secondNumber) {
               matchedCards.push(firstCard, secondCard);
@@ -161,7 +159,7 @@ let didWin = false;
                 setTimeout(() => {
                   alert("Вы выиграли!");
                   didWin = true;
-                  let btn = createAgainButton();
+                  const btn = createAgainButton();
                   gameContainer.append(btn);
                   btn.addEventListener("click", () => {
                     numbers = [];
@@ -183,9 +181,9 @@ let didWin = false;
   }
 
   function createGame(containerName) {
-    let gameContainer = document.getElementById(containerName);
-    let gameTitle = createGameTitle("Игра в пары");
-    let itemForm = createGameForm();
+    const gameContainer = document.getElementById(containerName);
+    const gameTitle = createGameTitle("Игра в пары");
+    const itemForm = createGameForm();
 
     gameContainer.append(gameTitle, itemForm.form);
     formSubmit(gameContainer, itemForm);
